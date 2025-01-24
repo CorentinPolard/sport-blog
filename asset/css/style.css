@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.introduction {
+    margin-bottom: 50px;
+}
+
+.article-link {
+    text-decoration: none;
+}
+
+.resizing {
+    height: 375px;
+}
+
+.resizing:hover {
+    transform: scale(1.2);
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-article {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 575px) {
+    .img-article {
+        max-height: 155px;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .img-article {
+        max-height: 215px;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .img-article {
+        max-height: 185px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .img-article {
+        max-height: 225px;
+    }
+}

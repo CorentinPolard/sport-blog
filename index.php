@@ -18,10 +18,10 @@ include_once "./asset/images/data.php";
             <div class="col-lg-4 col-sm-6">
                 <a class="article-link" href="./single.php?articleIndex=<?php echo $key ?>">
                     <div class="card resizing">
-                        <img class="card-img-top img-article" src="./asset/images/<?php echo $art['imagePath'] ?>">
+                        <img class="card-img-top thumbnail-article" src="./asset/images/<?php echo $art['imagePath'] ?>">
                         <div class="card-body card-description">
                             <h5 class="card-title"> <?php echo $art['name'] ?></h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Created by <?php echo $art['createdBy'] ?> - <?php echo $art['date'] ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Écrit par <?php echo $art['createdBy'] ?> - <?php echo $art['date'] ?></h6>
                             <p class="card-text"><?php echo substr($art['article'], 0, 25) ?>...</p>
                         </div>
                     </div>

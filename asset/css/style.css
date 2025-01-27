@@ -2,11 +2,26 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #DDD0C8;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.bg-color-grey {
+    background-color: #323232;
+}
+
+h1 {
+    margin: 8px 0;
 }
 
 footer {
+    width: 100%;
     padding: 10px;
     margin-top: 15px;
+    position: absolute;
+    bottom: 0;
 }
 
 .introduction {
@@ -31,31 +46,89 @@ footer {
     justify-content: center;
 }
 
-.img-article {
+.thumbnail-article {
     max-height: 250px;
     object-fit: cover;
 }
 
+/* Style single.php */
+
+.single {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.img-article {
+    height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.article-content{
+    font-family: baskerville;
+}
+
+.input-form {
+    width: 300px;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Contacts */
+
+.screenSize {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 40px;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#submit {
+    margin-top: 15px;
+}
+
 @media screen and (min-width: 575px) {
-    .img-article {
+    .thumbnail-article {
         max-height: 155px;
     }
 }
 
-@media screen and (min-width: 770px) {
-    .img-article {
+@media screen and (min-width: 768px) {
+    .thumbnail-article {
         max-height: 215px;
+    }
+
+    .single{
+        font-size: 1.2em;
+    }
+
+    .img-article {
+        height: 300px;
     }
 }
 
 @media screen and (min-width: 991px) {
-    .img-article {
+    .thumbnail-article {
         max-height: 185px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .img-article {
+    .thumbnail-article {
         max-height: 225px;
+    }
+
+    .img-article {
+        height: 350px;
     }
 }

@@ -1,4 +1,4 @@
-<footer class="d-flex flex-column align-items-center bg-secondary text-white">
+<footer class="d-flex flex-column align-items-center bg-color-grey text-white">
     <h6>Company name</h6>
     <address>
         adresse

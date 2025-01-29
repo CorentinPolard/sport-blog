@@ -21,14 +21,14 @@ include_once "header.php";
         <textarea id="message" class="input-form" type="text-area" name="message" required></textarea>
         <input id="submit" class="input-form" type="submit">
     </form>
+    <?php if (isset($_GET["isValid"])) {
+        if ($_GET['isValid']): ?>
+            <p><?php echo "Votre message a bien été transmis."?></p>
+        <?php else: ?>
+            <p><?php echo "Désolé ! Votre message n'a pas été transmis car vous avez utilisé un ou plusieurs mots bannis."?></p>
+        <?php endif ?>
+    <?php } ?> 
 </div>
 
-<?php if (isset($_GET["isValid"])) {
-    if ($_GET['isValid']): ?>
-        <p><?php echo "Votre message a bien été transmis."?></p>
-    <?php else: ?>
-        <p><?php echo "Désolé ! Votre message n'a pas été transmis car vous avez utilisé un ou plusieurs mots bannis."?></p>
-    <?php endif ?>
-<?php } ?> 
 
 <?php include_once "footer.php" ?>

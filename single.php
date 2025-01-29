@@ -8,8 +8,7 @@ $author = $articles[$origine]['createdBy'];
 $date = $articles[$origine]['date'];
 $articleContent = $articles[$origine]['article'];
 
-include_once "header.php";
-?>
+include_once "header.php";?>
 
 <div class="container single">
     <h1><?php echo $titre ?></h1>
@@ -18,5 +17,17 @@ include_once "header.php";
     <p class="article-content"><?php echo $articleContent ?></p>
 </div>
 
-<?php include_once "footer.php";
-?>
+<?php 
+
+// Compteur : 
+if (!isset($_SESSION['visitedPages'])) {
+    $_SESSION['visitedPages'] = [];
+
+}
+
+if (!in_array($origine, $_SESSION['visitedPages'])){
+    $_SESSION['visitedPages'][] = $titre;
+    $_SESSION['compteur'] = count($_SESSION['visitedPages']);
+}
+
+include_once "footer.php"?>

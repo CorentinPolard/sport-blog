@@ -29,5 +29,23 @@ include_once "./asset/images/data.php";
             </div>
         <?php endforeach; ?>
     </div>
+
+    <!-- Affichage compteur du nombre d'articles lu(s) -->
+    <div>
+        <?php 
+        if (count($_SESSION['visitedPages']) == 0) {
+            $readenArticle = "Vous n'avez pas encore lu d'articles.";
+        } else if (count($_SESSION['visitedPages']) == 1) {
+            $readenArticle = "Vous avez lu un article : $_SESSION[visitedPages][0].";
+        } else {
+            $recap = "";
+            foreach ($_SESSION['visitedPages'] as $article) {
+                $recap .= "$article, ";
+                }
+            $readenArticle = "Vous avez lu $_SESSION[compteur] articles : $recap.";
+            $readenArticle = str_replace(", .", ".", $readenArticle);
+        } ?>
+        <p class="compteur"><?php echo $readenArticle ?></p>
+    </div>
 </div>
 <?php include_once "footer.php" ?>

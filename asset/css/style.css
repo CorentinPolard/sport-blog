@@ -37,7 +37,7 @@ footer {
 }
 
 .resizing:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 .card-description {
@@ -49,6 +49,10 @@ footer {
 .thumbnail-article {
     max-height: 250px;
     object-fit: cover;
+}
+
+.compteur {
+    padding-top: 30px;
 }
 
 /* Style single.php */
@@ -68,6 +72,8 @@ footer {
 .article-content{
     font-family: baskerville;
 }
+
+/* Style formulaire */
 
 .input-form {
     width: 300px;
@@ -104,11 +110,13 @@ form {
 }
 
 @media screen and (min-width: 768px) {
+
+
     .thumbnail-article {
         max-height: 215px;
     }
 
-    .single{
+    .single, .introduction, .compteur{
         font-size: 1.2em;
     }
 

@@ -1,4 +1,8 @@
-<?php session_start() ?>
+<?php 
+session_start();
+if (!isset($_SESSION['visitedPages'])) {
+    $_SESSION['visitedPages'] = [];
+} ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

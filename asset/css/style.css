@@ -24,6 +24,10 @@ footer {
     bottom: 0;
 }
 
+.space-left {
+    padding-left: 15px;
+}
+
 .introduction {
     margin-bottom: 50px;
 }

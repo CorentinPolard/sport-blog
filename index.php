@@ -36,11 +36,11 @@ include_once "./asset/images/data.php";
         if (count($_SESSION['visitedPages']) == 0) {
             $readenArticle = "Vous n'avez pas encore lu d'articles.";
         } else if (count($_SESSION['visitedPages']) == 1) {
-            $readenArticle = "Vous avez lu un article : $_SESSION[visitedPages][0].";
+            $readenArticle = "Vous avez lu un article : \"". $_SESSION['visitedPages'][0] . "\".";
         } else {
             $recap = "";
             foreach ($_SESSION['visitedPages'] as $article) {
-                $recap .= "$article, ";
+                $recap .= "\"$article\", ";
                 }
             $readenArticle = "Vous avez lu $_SESSION[compteur] articles : $recap.";
             $readenArticle = str_replace(", .", ".", $readenArticle);
@@ -48,4 +48,6 @@ include_once "./asset/images/data.php";
         <p class="compteur"><?php echo $readenArticle ?></p>
     </div>
 </div>
-<?php include_once "footer.php" ?>
+<?php 
+// session_destroy();
+include_once "footer.php" ?>

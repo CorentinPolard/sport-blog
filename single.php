@@ -20,12 +20,7 @@ include_once "header.php";?>
 <?php 
 
 // Compteur : 
-if (!isset($_SESSION['visitedPages'])) {
-    $_SESSION['visitedPages'] = [];
-
-}
-
-if (!in_array($origine, $_SESSION['visitedPages'])){
+if (!in_array($titre, $_SESSION['visitedPages'])){
     $_SESSION['visitedPages'][] = $titre;
     $_SESSION['compteur'] = count($_SESSION['visitedPages']);
 }
